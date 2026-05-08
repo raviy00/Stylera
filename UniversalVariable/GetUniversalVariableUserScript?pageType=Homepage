@@ -1,0 +1,18 @@
+
+
+window.universal_variable = window.universal_variable || {};
+
+
+                window.universal_variable.user = {"geoCountryCode":"US","returning":false,"language":"en","countryId":181,"countryCode":"SG","geoCountryId":216,"geoSubfolder":"","userSubfolder":"/sg","userId":2147483647,"isLogged":false,"ip":"34.46.237.233","isBot":true,"cookieId":"6f938ad4-d48d-4442-8053-51fdf6d8f30d","sessionId":"ccb3c67c-299c-4821-6f50-7fe99a3a80b8","basketId":"fb085be4-a76e-42d1-bfe1-701bcefee577","checkoutType":0,"benefits":[],"genderId":0,"wishListQuantity":0,"bct":"512325","accessTier":null,"isMobile":false,"hashedIp":"91d0e1945551de1609d5ea5bda83d70efe4c7b370ef20ed583bcb9ad42090b3a","emailVerified":false};
+
+if (window.universal_variable.user) {
+    var uvUserEvt = document.createEvent('Event');
+    uvUserEvt.initEvent('universal_variable.user', true, true);
+    document.dispatchEvent(uvUserEvt);
+
+    var uvLoadedEvt = document.createEvent('Event');
+    uvLoadedEvt.initEvent('uvLoaded', true, true);
+    document.dispatchEvent(uvLoadedEvt);
+
+    window.events.emit('userLoaded');
+}
